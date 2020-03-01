@@ -1,7 +1,8 @@
-## Typescript variables syntax
+## Typescript Basics
 
 ### Variables
 
+#### Basic variable types
 ```typescript
 let anyVar: any = 'string';
 let stringVar: string = 'string';
@@ -14,6 +15,7 @@ let undefinedVar: undefined = undefined;
 
 ### Structures
 
+#### Define what types are expected in an array
 ```typescript
 let stringArray: Array<string> = ['one', 'two', 'three'];
 let numberArray: Array<number> = [1,2,3];
@@ -27,8 +29,8 @@ let tupleArray: [string, number, boolean] = ['one', 2, true];
 
 ## Functions
 
-Function arguments and return type can be defined.
-Return type is defined after the arguments ()
++ Function arguments and return type can be defined.
++ Return type is defined after the arguments ()
 
 ```typescript
 function add(x: number, y: number): number {
@@ -57,10 +59,7 @@ interface Post {
     title: string,
     content: string,
 };
-```
 
-Use defined interface in a function definition
-```typescript
 function createPost(newPost: Post): Post {
     return newPost;
 }
@@ -68,15 +67,15 @@ function createPost(newPost: Post): Post {
 
 ### Classes
 
-Can define access controls on class properties / methods
-Public (default) = property can be accessed from outside class definition - e.g userOne.id
-Private = property can only be accessed from inside class definition
-Protected = property can be accessed within definitions of other classes which extend this class
-Readonly = property is read only - can not be set to a different value. These need to be initialised when declared, or in the constructor
-Static = properties on the class rather than instances of the class - accessed using User.property rather than this.property
++ Can define access controls on class properties / methods
++ Public (default) = property can be accessed from outside class definition - e.g userOne.id
++ Private = property can only be accessed from inside class definition
++ Protected = property can be accessed within definitions of other classes which extend this class
++ Readonly = property is read only - can not be set to a different value. These need to be initialised when declared, or in the constructor
++ Static = properties on the class rather than instances of the class - accessed using User.property rather than this.property
 
 #### Accessors
-Can define getters and setters to access/update private properties - this allows putting rules in place, e.g validation, when changing values on an instance
++ Can define getters and setters to access/update private properties - this allows putting rules in place, e.g validation, when changing values on an instance
 
 ```typescript
 class User {
@@ -106,9 +105,9 @@ class User {
 
 ### Abstract Classes
 
-Abstract classes can not be instantiated directly, they provide base structure for other classes to extend
-Any methods marked as abstract within an abstract class does not define implementation - it just says this method should exist on extended classes
-The implementaion must be defined when creating extended classes
++ Abstract classes can not be instantiated directly, they provide base structure for other classes to extend
++ Any methods marked as abstract within an abstract class does not define implementation - it just says this method should exist on extended classes
++ The implementaion must be defined when creating extended classes
 
 ```typescript
 abstract class Page {
